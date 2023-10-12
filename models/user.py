@@ -1,14 +1,14 @@
 #!/usr/bin/python3
+"""imports BaseModel"""
 from models.base_model import BaseModel
-"""class User that inherits from BaseModel"""
 
 
 class User(BaseModel):
-    """
-    class inheriting BaseModel
-    """
-
-    email = ""
-    password = ""
-    first_name = ""
-    last_name = ""
+    """inherites from Base Model"""
+    def __init__(self, *args, **kwargs):
+        """update kwargs with user elements"""
+        super().__init__(*args, **kwargs)
+        self.email = ""
+        self.password = ""
+        self.first_name = ""
+        self.last_name = ""

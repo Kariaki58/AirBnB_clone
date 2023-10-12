@@ -19,13 +19,14 @@ class BaseModel:
         args: any
         kwargs : to be used
         """
-        time_format = "%Y-%m-%dT%H:%M:%S.%f" 
         if kwargs:
+            time_format = "%Y-%m-%dT%H:%M:%S.%f" 
             for key, value in kwargs.items():
-                if key == "created_at" or key == "updated_at":
-                    self.__dict__[key] = datetime.strptime(value, time_format)
-                else:
-                    self.__dict__[key] = value
+                if key == "__class__":
+                    continue
+                if key in ["created_at", "updated_at"]:
+                    value = datetime.strptime(value, time_format)
+                setattr(self, key, value)
         else:
             self.id = str(uuid4())
             self.created_at = datetime.today()
@@ -36,25 +37,25 @@ class BaseModel:
         """
         string representation of the objects
         """
-        return f"[{__class__.__name__}] ({self.id}) {self.__dict__}"
+        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
     def save(self):
         """
         updates the public instance attribute'
         updated_at with the current datetime
         """
-        self.updated_at = datetime.today()
         models.storage.save()
+        self.updated_at = datetime.today()
 
     def to_dict(self):
         """
         return a dictionary containing all keys/value
         of __dict__ instance
         """
-        d_instances = self.__dict__
         if isinstance(self.created_at, datetime):
-            d_instances["created_at"] = self.created_at.isoformat()
+            self.created_at = self.created_at.isoformat()
         if isinstance(self.updated_at, datetime):
-            d_instances["updated_at"] = self.updated_at.isoformat()
+            self.updated_at = self.updated_at.isoformat()
+        d_instances = self.__dict__
         d_instances["__class__"] = self.__class__.__name__
         return d_instances
