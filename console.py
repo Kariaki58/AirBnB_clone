@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""importing useful model"""
 import cmd
 from models.base_model import BaseModel
 from models.user import User
@@ -11,7 +12,11 @@ from models import storage
 
 
 class HBNBCommand(cmd.Cmd):
+
+
+
     """AirBnB console"""
+
     prompt = "(hbnb) "
     valid_classes = {
             "BaseModel": BaseModel, "Amenity": Amenity,
