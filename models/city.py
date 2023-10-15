@@ -7,8 +7,9 @@ class City(BaseModel):
     """
     Class that will inherit BaseModel
     """
+    state_id = ""
+    name = ""
+
     def __init__(self, *args, **kwargs):
         """inherets all from BaseModel"""
         super().__init__(*args, **kwargs)
-        self.state_id = ""
-        self.name = ""
