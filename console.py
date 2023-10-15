@@ -12,7 +12,11 @@ from models import storage
 
 
 class HBNBCommand(cmd.Cmd):
-     """Airbnb Console doc"""
+
+
+
+    """AirBnB console"""
+
     prompt = "(hbnb) "
     valid_classes = {
             "BaseModel": BaseModel, "Amenity": Amenity,
