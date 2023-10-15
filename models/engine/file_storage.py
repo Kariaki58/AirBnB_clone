@@ -41,7 +41,7 @@ class FileStorage:
 
     def reload(self):
         """
-        function to ddeserializ the JSON file to __objects
+        function to ddeserializ the JSON fie to __objects
         """
         try:
             with open(FileStorage.__file_path, "r", encoding="UTF8") as file:
