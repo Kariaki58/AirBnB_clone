@@ -5,7 +5,6 @@ from uuid import uuid4
 from datetime import datetime
 
 
-
 class BaseModel:
     """
     class that will define all commont/
@@ -20,7 +19,7 @@ class BaseModel:
         kwargs : to be used
         """
         if kwargs:
-            time_format = "%Y-%m-%dT%H:%M:%S.%f" 
+            time_format = "%Y-%m-%dT%H:%M:%S.%f"
             for key, value in kwargs.items():
                 if key == "__class__":
                     continue
