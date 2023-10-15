@@ -183,10 +183,11 @@ class HBNBCommand(cmd.Cmd):
                 key_datax = data.split(":")[0].replace("'", "")
                 key_data = key_datax.replace('"', "").replace(" ", "")
                 value_datax = data.split(":")[1].replace("'", "")
-                value_data = value_data.replace('"', "").replace(" ", "")
+                value_data = value_datax.replace('"', "").replace(" ", "")
                 textx = text + " " + key_data + " " + value_data
                 self.set_update(textx)
 
 
 if __name__ == "__main__":
+    """entry point of the program"""
     HBNBCommand().cmdloop()
