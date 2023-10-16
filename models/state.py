@@ -7,8 +7,4 @@ class State(BaseModel):
     """
     class to inherit from BaseModel
     """
-    def __init__(self, *args, **kwargs):
-        """init method
-        """
-        super().__init__(*args, **kwargs)
-        self.name = ""
+    name = ""
