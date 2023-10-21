@@ -1,0 +1,102 @@
+.places h1 {
+    position: relative;
+    text-align: top left;
+    font-size: 30px;
+}
+
+.places div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.places article {
+    position: relative;
+    width: 390px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ff5a5f;
+    border-radius: 4px;
+}
+
+.places article h2 {
+    text-align: center;
+}
+
+div .price_by_night {
+    position: absolute;
+    top: 0.5em;
+    right: 1.5em;
+    color: #ff5a5f;
+    border: 4px solid #ff5a5f;
+    min-width: 60px;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div .information {
+    height: 80px;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+
+.max_guest, .number_rooms, .number_bathrooms {
+    position: relative;
+    width: 100px;
+    background-image: url("../images/icon_group.png");
+    background-repeat: no-repeat;
+    background-position: 10px 15px;
+}
+
+.number_rooms {
+    background-image: url("../images/icon_bed.png");
+}
+
+.number_bathrooms {
+    background-image: url("../images/icon_bath.png");
+}
+
+.max_guest::after, .number_rooms::after, .number_bathrooms::after {
+    content: "2 Guests";
+    position: absolute;
+    bottom: 2px;
+    left: 10px;
+}
+
+.number_rooms::after {
+    content: "1 Bedroom";
+}
+
+.number_bathrooms::after {
+    content: "5 bathrooms";
+}
+
+.data_1::after {
+    content: "4 Guest";
+}
+
+.data_2::after {
+    content: "4 Bedroom";
+}
+
+.data_3::after {
+    content: "3 bathrooms";
+}
+
+.next_1::after {
+    content: "10 Guest";
+}
+
+.next_2::after {
+    content: "12 Bedroom";
+}
+
+.next_3::after {
+    content: "5 bathrooms";
+}
+
