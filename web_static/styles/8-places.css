@@ -100,3 +100,8 @@ div .information {
     content: "5 bathrooms";
 }
 
+.user h4 {
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%;
+}
