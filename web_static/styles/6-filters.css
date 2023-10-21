@@ -60,13 +60,15 @@ h4 {
     margin: 0px 0px 8px 0px;
 }
 .popover {
+    position: absolute;
     display: none;
     background-color: #fafafa;
     padding: 20px 10px 10px 10px;
     border: 1px solid #dddddd;
     border-radius: 4px;
+    width: inherit;
     margin: 0;
-    width: 100%;
+    z-index: 1;
 }
 
 li {
