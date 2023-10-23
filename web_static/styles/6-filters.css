@@ -28,18 +28,17 @@ button::after {
     display: table;
 }
 
-.locations, .amenities {
-    height: 100%;
+.filters .locations, .filters .amenities {
     padding: 0px 10px 0px 10px;
     width: 25%;
     float: left;
 }
 
-.locations {
+.filters .locations {
     border-right: 1px solid #dddddd;
 }
 
-.locations::after, .amenities::after{
+.filters .locations::after, .filters .amenities::after{
     content: "";
     clear: both;
     display: table;
@@ -78,10 +77,10 @@ li {
 .popover ul {
     padding-bottom: 10px;
 }
-.locations:hover .popover{
+.filters .locations:hover .popover{
     display: block;
 }
 
-.amenities:hover .popover {
+.filters .amenities:hover .popover {
     display: block;
 }
